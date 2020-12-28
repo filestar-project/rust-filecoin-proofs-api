@@ -14,9 +14,9 @@ pub enum RegisteredSealProof {
     StackedDrg2KiBV1,
     StackedDrg8MiBV1,
     StackedDrg512MiBV1,
-    StackedDrg8GiBV1,
     StackedDrg32GiBV1,
     StackedDrg64GiBV1,
+    StackedDrg8GiBV1,
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, Serialize, Deserialize)]
@@ -224,15 +224,15 @@ pub enum RegisteredPoStProof {
     StackedDrgWinning2KiBV1,
     StackedDrgWinning8MiBV1,
     StackedDrgWinning512MiBV1,
-    StackedDrgWinning8GiBV1,
     StackedDrgWinning32GiBV1,
     StackedDrgWinning64GiBV1,
     StackedDrgWindow2KiBV1,
     StackedDrgWindow8MiBV1,
     StackedDrgWindow512MiBV1,
-    StackedDrgWindow8GiBV1,
     StackedDrgWindow32GiBV1,
     StackedDrgWindow64GiBV1,
+    StackedDrgWinning8GiBV1,
+    StackedDrgWindow8GiBV1,
 }
 
 impl RegisteredPoStProof {
@@ -413,9 +413,9 @@ mod tests {
         RegisteredSealProof::StackedDrg2KiBV1,
         RegisteredSealProof::StackedDrg8MiBV1,
         RegisteredSealProof::StackedDrg512MiBV1,
-        RegisteredSealProof::StackedDrg8GiBV1,
         RegisteredSealProof::StackedDrg32GiBV1,
         RegisteredSealProof::StackedDrg64GiBV1,
+        RegisteredSealProof::StackedDrg8GiBV1,
     ];
 
     #[test]
@@ -436,13 +436,13 @@ mod tests {
             RegisteredSealProof::StackedDrg512MiBV1 => {
                 "0200000000000000000000000000000000000000000000000000000000000000"
             }
-            RegisteredSealProof::StackedDrg8GiBV1 => {
+            RegisteredSealProof::StackedDrg32GiBV1 => {
                 "0300000000000000000000000000000000000000000000000000000000000000"
             }
-            RegisteredSealProof::StackedDrg32GiBV1 => {
+            RegisteredSealProof::StackedDrg64GiBV1 => {
                 "0400000000000000000000000000000000000000000000000000000000000000"
             }
-            RegisteredSealProof::StackedDrg64GiBV1 => {
+            RegisteredSealProof::StackedDrg8GiBV1 => {
                 "0500000000000000000000000000000000000000000000000000000000000000"
             }
         };

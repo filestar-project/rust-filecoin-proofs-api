@@ -32,9 +32,9 @@ pub enum Labels {
     StackedDrg2KiBV1(RawLabels<SectorShape2KiB>),
     StackedDrg8MiBV1(RawLabels<SectorShape8MiB>),
     StackedDrg512MiBV1(RawLabels<SectorShape512MiB>),
-    StackedDrg8GiBV1(RawLabels<SectorShape8GiB>),
     StackedDrg32GiBV1(RawLabels<SectorShape32GiB>),
     StackedDrg64GiBV1(RawLabels<SectorShape64GiB>),
+    StackedDrg8GiBV1(RawLabels<SectorShape8GiB>),
 }
 
 impl Labels {
@@ -169,9 +169,9 @@ pub enum VanillaSealProof {
     StackedDrg2KiBV1(Vec<Vec<RawVanillaSealProof<SectorShape2KiB>>>),
     StackedDrg8MiBV1(Vec<Vec<RawVanillaSealProof<SectorShape8MiB>>>),
     StackedDrg512MiBV1(Vec<Vec<RawVanillaSealProof<SectorShape512MiB>>>),
-    StackedDrg8GiBV1(Vec<Vec<RawVanillaSealProof<SectorShape8GiB>>>),
     StackedDrg32GiBV1(Vec<Vec<RawVanillaSealProof<SectorShape32GiB>>>),
     StackedDrg64GiBV1(Vec<Vec<RawVanillaSealProof<SectorShape64GiB>>>),
+    StackedDrg8GiBV1(Vec<Vec<RawVanillaSealProof<SectorShape8GiB>>>),
 }
 
 impl VanillaSealProof {
